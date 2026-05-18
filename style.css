@@ -264,3 +264,57 @@ button:hover{
         grid-template-columns: 1fr;
     }
 }
+/* =========================
+   PORTFOLIO
+========================= */
+
+.portfolio-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+
+    margin-top: 50px;
+}
+
+.portfolio-card{
+    background: rgba(255,255,255,0.03);
+    border-radius: 18px;
+    overflow: hidden;
+
+    transition: 0.4s;
+
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.portfolio-card:hover{
+    transform: translateY(-10px);
+}
+
+.portfolio-card img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.portfolio-content{
+    padding: 25px;
+    text-align: left;
+}
+
+.portfolio-content h3{
+    margin-bottom: 10px;
+}
+
+.portfolio-content p{
+    opacity: 0.8;
+    line-height: 1.7;
+}
+.card h3{
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.card p{
+    opacity: 0.8;
+    line-height: 1.8;
+}
