@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elivon Technology</title>
-
+    <title>Elivon Technology | Web Development, Mobile Apps & UI/UX Design</title>
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,9 +12,36 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- SEO -->
+<meta name="description" content="Elivon Technology is a professional digital agency specializing in website development, mobile apps, UI/UX design, branding, and graphic design solutions in Zambia.">
+
+<meta name="keywords" content="web development, mobile apps, UI UX design, logo design, graphic design, Elivon Technology, Zambia tech company, website designer">
+
+<meta name="author" content="Elivon Technology">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Open Graph (for WhatsApp & Facebook sharing) -->
+<meta property="og:title" content="Elivon Technology - Digital Agency">
+<meta property="og:description" content="We build modern websites, mobile apps, UI/UX designs, and branding solutions.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/logo.png">
 </head>
 
 <body>
+    <!-- LOADING SCREEN -->
+<div id="preloader">
+
+    <div class="loader-content">
+
+        <img src="images/logo.png" alt="Elivon Logo" class="loader-logo">
+
+        <p>Loading Elivon Technology...</p>
+
+        <div class="spinner"></div>
+
+    </div>
+
+</div>
 
     <!-- HEADER -->
     <header>
@@ -35,32 +61,59 @@
     </header>
 
     <!-- HERO -->
-    <section class="hero reveal">
+   <section class="hero">
 
-        <div class="hero-left">
+    <div class="hero-left">
 
-            <h2>
-                We Build Digital Experiences That Grow Businesses
-            </h2>
+        <h1 class="hero-title">
+            We Build Powerful Digital Products That Grow Your Business
+        </h1>
 
-            <p>
-                We design and develop professional websites,
-                mobile apps, branding systems, and modern
-                digital solutions.
-            </p>
+        <p class="hero-subtext">
+            Elivon Technology designs and develops modern websites, mobile apps,
+            UI/UX systems, and branding solutions that help businesses scale online.
+        </p>
 
-            <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-                Get Started
+        <div class="hero-buttons">
+
+            <button onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
+                View Services
+            </button>
+
+            <button class="secondary-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+                Contact Us
             </button>
 
         </div>
 
-        <div class="hero-right">
-            <div class="glow-box"></div>
+    </div>
+
+    <div class="hero-right">
+
+        <div class="hero-card">
+
+            <h3>🚀 Digital Solutions</h3>
+            <p>Web • Apps • Design • Branding</p>
+
         </div>
 
-    </section>
+        <div class="hero-card">
 
+            <h3>⚡ Fast Delivery</h3>
+            <p>Professional & On-Time Execution</p>
+
+        </div>
+
+        <div class="hero-card">
+
+            <h3>🎯 Business Focused</h3>
+            <p>We build for real growth & results</p>
+
+        </div>
+
+    </div>
+
+</section>
     <!-- SERVICES -->
     <section id="services" class="section reveal">
 
@@ -143,17 +196,54 @@
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="section reveal">
+   <section id="about" class="section reveal">
 
-        <h2 class="title">About Us</h2>
+    <h2 class="title">About Elivon Technology</h2>
 
-        <p class="text">
-            Elivon Technology is a modern digital agency focused on building
-            high-quality digital experiences that help businesses grow online.
-        </p>
+    <p class="text">
+        Elivon Technology is a modern digital agency focused on building
+        high-quality websites, mobile applications, UI/UX designs, and branding
+        solutions that help businesses grow in the digital world.
+    </p>
 
-    </section>
+    <div class="about-grid">
 
+        <div class="about-card">
+
+            <h3>🎯 Our Mission</h3>
+
+            <p>
+                To help businesses and individuals establish a powerful digital
+                presence through clean design, modern technology, and user-focused solutions.
+            </p>
+
+        </div>
+
+        <div class="about-card">
+
+            <h3>🚀 Our Vision</h3>
+
+            <p>
+                To become a leading African tech brand delivering world-class
+                digital products and innovative solutions across industries.
+            </p>
+
+        </div>
+
+        <div class="about-card">
+
+            <h3>💡 What We Do</h3>
+
+            <p>
+                We specialize in web development, mobile apps, UI/UX design,
+                branding, and graphic design tailored for business growth.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
     <!-- PORTFOLIO -->
     <section id="portfolio" class="section reveal">
 
@@ -280,65 +370,84 @@
 </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section reveal">
+   <section id="contact" class="section reveal">
 
-        <h2 class="title">Contact Us</h2>
+    <h2 class="title">Contact Us</h2>
 
-        <p class="text">
-            Let’s build something amazing together.
-        </p>
+    <p class="text">
+        Have a project idea? Let’s bring it to life. Send us a message and we’ll respond as soon as possible.
+    </p>
 
+    <div class="contact-wrapper">
+
+        <!-- FORM -->
         <form id="contact-form" class="contact-form">
 
-            <input type="text" placeholder="Your Name" required>
+            <input type="text" name="from_name" placeholder="Your Name" required>
 
-            <input type="email" placeholder="Your Email" required>
+            <input type="email" name="from_email" placeholder="Your Email" required>
 
-            <textarea placeholder="Your Project Idea" required></textarea>
+            <textarea name="message" placeholder="Tell us about your project..." required></textarea>
 
-            <button type="submit">
-                Send Message
-            </button>
+            <button type="submit">Send Message</button>
 
         </form>
 
-    </section>
+        <!-- INFO BOX -->
+        <div class="contact-info">
+
+            <h3>📩 Quick Contact</h3>
+
+            <p>Email: elivontech@gmail.com</p>
+
+            <p>WhatsApp: Available (bottom right button)</p>
+
+            <p>Location: Zambia</p>
+
+            <br>
+
+            <p>
+                We usually respond within a few hours.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
 
     <!-- EMAILJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
+   <script>
+document.addEventListener("DOMContentLoaded", function () {
 
-        emailjs.init("dGkCJeQmZ1w9tnwCu");
+    emailjs.init("dGkCJeQmZ1w9tnwCu");
 
-        const form = document.getElementById("contact-form");
+    const form = document.getElementById("contact-form");
 
-        form.addEventListener("submit", function (e) {
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-            e.preventDefault();
+        emailjs.sendForm(
+            "service_jqj9ab2",
+            "template_shtid7g",
+            this
+        ).then(() => {
 
-            emailjs.sendForm(
-                "service_jqj9ab2",
-                "template_shtid7g",
-                this
-            ).then(function () {
+            alert("Message sent successfully!");
+            form.reset();
 
-                alert("Message sent successfully!");
-                form.reset();
+        }).catch((error) => {
 
-            }, function (error) {
-
-                alert("Failed to send message");
-                console.log(error);
-
-            });
+            alert("Failed to send message");
+            console.log(error);
 
         });
-
     });
-    </script>
 
+});
+</script>
     <!-- LIGHTBOX -->
     <div id="lightbox" class="lightbox">
 
@@ -405,6 +514,23 @@ document.addEventListener("DOMContentLoaded", function () {
             lightbox.style.display = "none";
         }
     });
+
+});
+</script>
+<script>
+window.addEventListener("load", function () {
+
+    const preloader = document.getElementById("preloader");
+
+    setTimeout(() => {
+        preloader.style.opacity = "0";
+        preloader.style.transition = "0.5s ease";
+
+        setTimeout(() => {
+            preloader.style.display = "none";
+        }, 500);
+
+    }, 1200); // loading duration
 
 });
 </script>

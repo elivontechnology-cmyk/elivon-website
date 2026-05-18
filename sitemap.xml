@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://elivon-website.vercel.app/#/</loc>
+  </url>
+
+  <url>
+    <loc>https://elivon-website.vercel.app/#/web.html</loc>
+  </url>
+
+  <url>
+    <loc>https://elivon-website.vercel.app/#/mobile.html</loc>
+  </url>
+
+  <url>
+    <loc>https://elivon-website.vercel.app/#/uiux.html</loc>
+  </url>
+
+  <url>
+    <loc>https://elivon-website.vercel.app/#/logo.html</loc>
+  </url>
+
+  <url>
+    <loc>https://elivon-website.vercel.app/#/poster.html</loc>
+  </url>
+
+</urlset>

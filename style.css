@@ -722,3 +722,236 @@ body{
 
     cursor: pointer;
 }
+/* =========================
+   PRELOADER
+========================= */
+
+#preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: #230f14;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 99999;
+}
+
+.loader-content{
+    text-align: center;
+}
+
+.loader-logo{
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.loader-content p{
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+/* SPINNER */
+.spinner{
+    width: 45px;
+    height: 45px;
+
+    border: 4px solid rgba(255,255,255,0.2);
+    border-top: 4px solid #3a0b19;
+
+    border-radius: 50%;
+
+    animation: spin 1s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+/* =========================
+   HERO UPGRADE
+========================= */
+
+.hero{
+    min-height: 90vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 80px;
+
+    gap: 50px;
+}
+
+.hero-title{
+    font-size: 55px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-subtext{
+    font-size: 18px;
+    opacity: 0.85;
+    margin-bottom: 30px;
+    max-width: 600px;
+    line-height: 1.7;
+}
+
+/* BUTTONS */
+.hero-buttons{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.secondary-btn{
+    background: transparent;
+    border: 1px solid #3a0b19;
+}
+
+/* RIGHT SIDE CARDS */
+.hero-right{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero-card{
+    background: rgba(255,255,255,0.04);
+    padding: 20px;
+    border-radius: 12px;
+
+    border: 1px solid rgba(255,255,255,0.05);
+
+    transition: 0.3s;
+}
+
+.hero-card:hover{
+    transform: translateX(10px);
+    background: rgba(255,255,255,0.06);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px){
+
+    .hero{
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .hero-buttons{
+        justify-content: center;
+    }
+
+    .hero-title{
+        font-size: 32px;
+    }
+}
+/* =========================
+   ABOUT UPGRADE
+========================= */
+
+.about-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+
+    margin-top: 50px;
+}
+
+.about-card{
+    background: rgba(255,255,255,0.03);
+    padding: 30px;
+    border-radius: 16px;
+
+    border: 1px solid rgba(255,255,255,0.05);
+
+    transition: 0.3s;
+}
+
+.about-card:hover{
+    transform: translateY(-10px);
+    background: rgba(255,255,255,0.06);
+}
+
+.about-card h3{
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.about-card p{
+    opacity: 0.85;
+    line-height: 1.7;
+}
+/* =========================
+   CONTACT UPGRADE
+========================= */
+
+.contact-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+
+    margin-top: 50px;
+}
+
+/* FORM */
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding: 15px;
+    border-radius: 10px;
+
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.03);
+
+    color: white;
+    outline: none;
+}
+
+.contact-form textarea{
+    min-height: 150px;
+}
+
+/* INFO BOX */
+.contact-info{
+    background: rgba(255,255,255,0.03);
+    padding: 30px;
+    border-radius: 16px;
+
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.contact-info h3{
+    margin-bottom: 15px;
+}
+
+.contact-info p{
+    opacity: 0.85;
+    line-height: 1.7;
+}
+/* =========================
+   ADMIN DASHBOARD
+========================= */
+
+#messages .card{
+    text-align: left;
+}
