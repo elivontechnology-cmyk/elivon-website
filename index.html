@@ -20,13 +20,15 @@
     <header>
         <img src="images/logo.png" alt="Elivon Logo" class="logo">
 
-        <nav>
-            <a href="#">Home</a>
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-        </nav>
+       <div class="menu-toggle" id="menu-toggle">☰</div>
+
+<nav id="nav">
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+</nav>
     </header>
 
     <!-- HERO -->
@@ -52,7 +54,7 @@
     </section>
 
     <!-- SERVICES -->
-  <section id="services" class="section">
+  <section id="services reveal" class="section">
 
     <h2 class="title">Our Services</h2>
 
@@ -99,7 +101,7 @@
 </section>
 
     <!-- ABOUT -->
-    <section id="about" class="section">
+    <section id="about reveal" class="section">
         <h2 class="title">About Us</h2>
 
         <p class="text">
@@ -109,7 +111,7 @@
     </section>
 
     <!-- PORTFOLIO -->
-    <section id="portfolio" class="section">
+    <section id="portfolio reveal" class="section">
 
     <h2 class="title">Our Work</h2>
 
@@ -122,7 +124,7 @@
             <img src="images/project1-4.jpg" alt="Modern logo design for a technology brand">
 
             <div class="portfolio-content">
-                <h3>Professional Logo Desing</h3>
+                <h3>Professional Logo Design</h3>
                 <p>Professional Logo Design, Designed for visual identity.</p>
             </div>
         </div>
@@ -155,7 +157,7 @@
 </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section">
+    <section id="contact reveal" class="section">
         <h2 class="title">Contact Us</h2>
 
         <p class="text">Let’s build something amazing together.</p>
@@ -167,6 +169,37 @@
             <button type="submit">Send Message</button>
         </form>
     </section>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    emailjs.init("dGkCJeQmZ1w9tnwCu");
+
+    const form = document.getElementById("contact-form");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        emailjs.sendForm(
+            "service_jqj9ab2",
+            "template_shtid7g",
+            this
+        ).then(function () {
+            alert("Message sent successfully!");
+            form.reset();
+        }, function (error) {
+            alert("Failed to send message");
+            console.log(error);
+        });
+    });
+
+});
+</script>
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" class="lightbox-img">
+</div>
 </body>
 </html>
