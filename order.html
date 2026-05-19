@@ -40,6 +40,7 @@
     </p>
 
     <form id="order-form" class="contact-form">
+
         <input type="text" name="service" id="service" readonly>
         <input type="text" name="package" id="package" readonly>
 
@@ -55,11 +56,7 @@
 
         <input type="text" name="location" placeholder="Company Location" required>
 
-        
-        <textarea
-        name="project_details"
-        placeholder="Describe your project..."
-        required></textarea>
+        <textarea name="project_details" placeholder="Describe your project..." required></textarea>
 
         <button type="submit">Submit Project</button>
 
@@ -69,79 +66,61 @@
 
 <!-- FOOTER -->
 <footer class="footer">
-
     <div class="footer-content">
-
         <img src="images/logo.png" alt="Logo" class="footer-logo">
-
-        <p>
-            © 2026 Elivon Technology. All Rights Reserved.
-        </p>
-
+        <p>© 2026 Elivon Technology. All Rights Reserved.</p>
     </div>
-
 </footer>
 
 <!-- WHATSAPP BUTTON -->
 <a href="https://wa.me/260762139892"
 class="whatsapp-btn"
 target="_blank">
-
 💬
-
 </a>
 
-<!-- EMAILJS -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<!-- SUPABASE -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script>
+const supabaseUrl = "YOUR_SUPABASE_URL";
+const supabaseKey = "YOUR_SUPABASE_ANON_KEY";
 
-emailjs.init("dGkCJeQmZ1w9tnwCu");
+const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 
-document
-.getElementById("order-form")
-.addEventListener("submit", function(e){
-
-    e.preventDefault();
-
-    emailjs.sendForm(
-        "service_jqj9ab2",
-        "template_shtid7g",
-        this
-    )
-
-    .then(function(){
-
-        alert("Project submitted successfully!");
-
-        document.getElementById("order-form").reset();
-
-    })
-
-    .catch(function(error){
-
-        alert("Failed to submit project.");
-
-        console.log(error);
-
-    });
-
-});
-
-</script>
-<script>
+// GET URL DATA (service + package)
 const urlParams = new URLSearchParams(window.location.search);
 
-const service = urlParams.get("service");
-const packageType = urlParams.get("package");
+document.getElementById("service").value = urlParams.get("service") || "";
+document.getElementById("package").value = urlParams.get("package") || "";
 
-if(service){
-    document.getElementById("service").value = service;
-}
+// SUBMIT FORM TO SUPABASE
+document.getElementById("order-form").addEventListener("submit", async function(e){
+    e.preventDefault();
 
-if(packageType){
-    document.getElementById("package").value = packageType;
-}
+    const { error } = await supabase
+        .from("orders")
+        .insert([{
+            service: this.service.value,
+            package: this.package.value,
+            name: this.client_name.value,
+            company: this.company_name.value,
+            position: this.position.value,
+            email: this.email.value,
+            phone: this.phone.value,
+            location: this.location.value,
+            message: this.project_details.value
+        }]);
+
+    if(error){
+        alert("Failed to submit project");
+        console.log(error);
+    } else {
+        alert("Project submitted successfully!");
+        this.reset();
+    }
+});
 </script>
+
 </body>
 </html>
