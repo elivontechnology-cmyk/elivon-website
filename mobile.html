@@ -3,275 +3,163 @@
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Mobile App Development | Elivon Technology</title>
 
-    <!-- FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header>
+<header class="navbar">
 
-        <img src="images/logo.png" alt="Elivon Logo" class="logo">
+    <img src="images/logo.png" alt="Logo" class="logo">
 
-        <nav>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
 
-            <a href="index.html">Home</a>
+    <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-            <a href="index.html#services">Services</a>
+</header>
 
-            <a href="index.html#portfolio">Portfolio</a>
+<!-- MOBILE APP PACKAGES -->
+<section class="section">
 
-            <a href="index.html#contact">Contact</a>
+    <h1 class="title">Mobile App Development Packages</h1>
 
-        </nav>
+    <p class="text">
+        Professional Android and iOS mobile applications designed for performance,
+        scalability, and exceptional user experience.
+    </p>
 
-    </header>
+    <div class="pricing-grid">
 
-    <!-- HERO -->
-    <section class="section reveal">
+        <!-- BASIC -->
+        <div class="pricing-card">
 
-        <h1 class="title">
-            Mobile App Development
-        </h1>
+            <h3>Starter App</h3>
 
-        <p class="text">
-            We design and build powerful Android and iOS applications
-            with modern UI, smooth performance, and scalable systems.
-        </p>
+            <div class="price">K4,500</div>
 
-    </section>
+            <ul>
+                <li>✔ Simple Mobile App</li>
+                <li>✔ Android Support</li>
+                <li>✔ Basic UI Design</li>
+                <li>✔ Up to 5 Screens</li>
+            </ul>
 
-    <!-- PACKAGES -->
-    <section class="section reveal">
-
-        <div class="grid">
-
-            <!-- STARTER -->
-            <div class="card">
-
-                <h3>Starter App</h3>
-
-                <p>Perfect for simple mobile ideas and MVPs.</p>
-
-                <br>
-
-                <h2>$150</h2>
-
-                <br>
-
-                <p>
-                    ✔ Basic App UI <br><br>
-                    ✔ 1–3 Screens <br><br>
-                    ✔ Simple Navigation <br><br>
-                    ✔ Android Build
-                </p>
-
-                <br>
-
-                <button onclick="window.location.href='https://wa.me/260000000000'">
-                    Order Now
-                </button>
-
-            </div>
-
-            <!-- BUSINESS -->
-            <div class="card">
-
-                <h3>Business App</h3>
-
-                <p>For companies needing full mobile presence.</p>
-
-                <br>
-
-                <h2>$400</h2>
-
-                <br>
-
-                <p>
-                    ✔ 5–10 Screens <br><br>
-                    ✔ Login System <br><br>
-                    ✔ Firebase Integration <br><br>
-                    ✔ API Connection <br><br>
-                    ✔ Android + iOS Ready
-                </p>
-
-                <br>
-
-                <button onclick="window.location.href='https://wa.me/260000000000'">
-                    Order Now
-                </button>
-
-            </div>
-
-            <!-- PREMIUM -->
-            <div class="card">
-
-                <h3>Premium App System</h3>
-
-                <p>Advanced scalable mobile applications.</p>
-
-                <br>
-
-                <h2>$900+</h2>
-
-                <br>
-
-                <p>
-                    ✔ Full Backend System <br><br>
-                    ✔ Authentication (Login/Register) <br><br>
-                    ✔ Database Integration <br><br>
-                    ✔ Admin Dashboard <br><br>
-                    ✔ API Development <br><br>
-                    ✔ Deployment Support
-                </p>
-
-                <br>
-
-                <button onclick="window.location.href='https://wa.me/260762139892'">
-                    Get Quote
-                </button>
-
-            </div>
+            <button onclick="window.location.href='order.html?service=Mobile App Development&package=Basic'">
 
         </div>
 
-    </section>
+        <!-- STANDARD -->
+        <div class="pricing-card featured">
 
-    <!-- WHY US -->
-    <section class="section reveal">
+            <h3>Business App</h3>
 
-        <h2 class="title">
-            Why Our Mobile Apps Stand Out
-        </h2>
+            <div class="price">K9,500</div>
 
-        <div class="grid">
+            <ul>
+                <li>✔ Android & iOS</li>
+                <li>✔ Modern UI/UX</li>
+                <li>✔ Database Integration</li>
+                <li>✔ Authentication System</li>
+                <li>✔ Admin Dashboard</li>
+            </ul>
 
-            <div class="card">
-
-                <h3>⚡ Fast Performance</h3>
-
-                <p>Optimized apps with smooth user experience.</p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>📱 Modern UI</h3>
-
-                <p>Clean and professional mobile interfaces.</p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>🔐 Secure Systems</h3>
-
-                <p>Authentication and secure data handling included.</p>
-
-            </div>
+      <button onclick="window.location.href='order.html?service=Mobile App Development'">
+    Get Started
+</button>
 
         </div>
 
-    </section>
+        <!-- PREMIUM -->
+        <div class="pricing-card">
 
-    <!-- CTA -->
-    <section class="section reveal">
+            <h3>Advanced Mobile System</h3>
 
-        <h2 class="title">
-            Ready To Build Your Mobile App?
-        </h2>
+            <div class="price">K18,000+</div>
 
-        <p class="text">
-            Let’s turn your idea into a powerful mobile application.
-        </p>
+            <ul>
+                <li>✔ Full Custom Application</li>
+                <li>✔ Real-Time Features</li>
+                <li>✔ Payment Integration</li>
+                <li>✔ Cloud Database</li>
+                <li>✔ Scalable Architecture</li>
+            </ul>
 
-        <br><br>
-
-        <button onclick="window.location.href='https://wa.me/260000000000'">
-            Contact Us
-        </button>
-
-    </section>
-<!-- WHATSAPP FLOATING BUTTON -->
-<a href="https://wa.me/260762139892" class="whatsapp-float" target="_blank">
-
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-
-</a>
-<!-- FOOTER -->
-<footer class="footer">
-
-    <div class="footer-container">
-
-        <!-- BRAND -->
-        <div class="footer-box">
-
-            <h2>Elivon Technology</h2>
-
-            <p>
-                We build modern websites, mobile apps, UI/UX designs,
-                and digital solutions that help businesses grow.
-            </p>
-
-        </div>
-
-        <!-- QUICK LINKS -->
-        <div class="footer-box">
-
-            <h3>Quick Links</h3>
-
-            <a href="index.html">Home</a>
-            <a href="index.html#services">Services</a>
-            <a href="index.html#portfolio">Portfolio</a>
-            <a href="index.html#contact">Contact</a>
-
-        </div>
-
-        <!-- SERVICES -->
-        <div class="footer-box">
-
-            <h3>Services</h3>
-
-            <a href="web.html">Web Development</a>
-            <a href="mobile.html">Mobile Apps</a>
-            <a href="uiux.html">UI/UX Design</a>
-            <a href="logo.html">Branding</a>
-
-        </div>
-
-        <!-- CONTACT -->
-        <div class="footer-box">
-
-            <h3>Contact</h3>
-
-            <p>📧 elivontech@gmail.com</p>
-            <p>📱 WhatsApp Available</p>
-            <p>📍 Zambia</p>
+           <button onclick="window.location.href='order.html?service=Mobile App Development&package=Standard'">
 
         </div>
 
     </div>
 
-    <div class="footer-bottom">
+</section>
 
-        <p>© 2026 Elivon Technology. All Rights Reserved.</p>
+<!-- CONTACT SECTION -->
+<section id="contact" class="section">
+
+    <h2 class="title">Build Your Mobile App</h2>
+
+    <p class="text">
+        Let’s turn your mobile app idea into a professional digital product.
+        Contact Elivon Technology today.
+    </p>
+
+    <div class="hero-buttons">
+
+        <button onclick="window.location.href='index.html#contact'">
+            Contact Us
+        </button>
+
+        <button class="secondary-btn"
+        onclick="window.open('https://wa.me/260762139892')">
+            WhatsApp Us
+        </button>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <img src="images/logo.png" alt="Elivon Logo" class="footer-logo">
+
+        <p>
+            © 2026 Elivon Technology. All Rights Reserved.
+        </p>
 
     </div>
 
 </footer>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/260762139892"
+class="whatsapp-btn"
+target="_blank">
+
+    💬
+
+</a>
+<script>
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav");
+
+toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
+</script>
 </body>
 </html>

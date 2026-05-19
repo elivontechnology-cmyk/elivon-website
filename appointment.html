@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Appointment | Elivon Technology</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <img src="images/logo.png" alt="Logo" class="logo">
+
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+<section class="section">
+
+    <h1 class="title">Book An Appointment</h1>
+
+    <p class="text">
+        Schedule a consultation or business meeting with Elivon Technology.
+    </p>
+
+    <form id="appointment-form" class="contact-form">
+
+        <input type="text"
+        name="client_name"
+        placeholder="Your Full Name"
+        required>
+
+        <input type="text"
+        name="company_name"
+        placeholder="Company Name"
+        required>
+
+        <input type="text"
+        name="position"
+        placeholder="Your Position">
+
+        <input type="email"
+        name="email"
+        placeholder="Your Email"
+        required>
+
+        <input type="text"
+        name="phone"
+        placeholder="Phone Number"
+        required>
+
+        <input type="text"
+        name="location"
+        placeholder="Company Location"
+        required>
+
+        <!-- MEETING TYPE -->
+        <select name="meeting_type" required>
+
+            <option value="">Meeting Type</option>
+
+            <option>Physical Meeting</option>
+
+            <option>Online Meeting</option>
+
+            <option>Phone Consultation</option>
+
+        </select>
+
+        <!-- MEETING LOCATION -->
+        <input type="text"
+        name="meeting_place"
+        placeholder="Preferred Meeting Place">
+
+        <!-- DATE -->
+        <input type="date"
+        name="meeting_date"
+        required>
+
+        <!-- TIME -->
+        <input type="time"
+        name="meeting_time"
+        required>
+
+        <textarea
+        name="meeting_details"
+        placeholder="Tell us about the meeting purpose..."
+        required></textarea>
+
+        <button type="submit">
+            Book Appointment
+        </button>
+
+    </form>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <img src="images/logo.png"
+        alt="Logo"
+        class="footer-logo">
+
+        <p>
+            © 2026 Elivon Technology. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/260762139892"
+class="whatsapp-btn"
+target="_blank">
+
+💬
+
+</a>
+
+<!-- EMAILJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+
+emailjs.init("dGkCJeQmZ1w9tnwCu");
+
+document
+.getElementById("appointment-form")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_jqj9ab2",
+        "template_shtid7g",
+        this
+    )
+
+    .then(function(){
+
+        alert("Appointment booked successfully!");
+
+        document
+        .getElementById("appointment-form")
+        .reset();
+
+    })
+
+    .catch(function(error){
+
+        alert("Failed to book appointment.");
+
+        console.log(error);
+
+    });
+
+});
+
+</script>
+<script>
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav");
+
+toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
+</script>
+</body>
+</html>

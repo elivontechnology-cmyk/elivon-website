@@ -15,12 +15,18 @@
 
 <body>
 
-<header>
+<header class="navbar">
 
     <img src="images/logo.png" alt="Logo" class="logo">
 
-    <nav>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <nav id="nav">
         <a href="index.html">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
     </nav>
 
 </header>
@@ -50,7 +56,9 @@
                 <li>✔ Basic SEO</li>
             </ul>
 
-            <button>Get Started</button>
+           <button onclick="window.location.href='order.html'">
+    Get Started
+</button>
 
         </div>
 
@@ -69,7 +77,9 @@
                 <li>✔ Admin Dashboard</li>
             </ul>
 
-            <button>Get Started</button>
+            <button onclick="window.location.href='order.html?service=Website Development&package=Standard'">
+    Get Started
+</button>
 
         </div>
 
@@ -88,7 +98,9 @@
                 <li>✔ Custom Features</li>
             </ul>
 
-            <button>Get Started</button>
+            <button onclick="window.location.href='order.html?service=Website Development&package=Premium'">
+    Get Started
+</button>
 
         </div>
 
@@ -143,6 +155,13 @@ target="_blank">
     💬
 
 </a>
+<script>
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav");
 
+toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
+</script>
 </body>
 </html>

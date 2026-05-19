@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Start Project | Elivon Technology</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <img src="images/logo.png" alt="Logo" class="logo">
+
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+<section class="section">
+
+    <h1 class="title">Start Your Project</h1>
+
+    <p class="text">
+        Fill in your project details and our team will contact you shortly.
+    </p>
+
+    <form id="order-form" class="contact-form">
+        <input type="text" name="service" id="service" readonly>
+        <input type="text" name="package" id="package" readonly>
+
+        <input type="text" name="client_name" placeholder="Your Full Name" required>
+
+        <input type="text" name="company_name" placeholder="Company Name" required>
+
+        <input type="text" name="position" placeholder="Your Position In Company">
+
+        <input type="email" name="email" placeholder="Your Email" required>
+
+        <input type="text" name="phone" placeholder="Phone Number" required>
+
+        <input type="text" name="location" placeholder="Company Location" required>
+
+        
+        <textarea
+        name="project_details"
+        placeholder="Describe your project..."
+        required></textarea>
+
+        <button type="submit">Submit Project</button>
+
+    </form>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <img src="images/logo.png" alt="Logo" class="footer-logo">
+
+        <p>
+            © 2026 Elivon Technology. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/260762139892"
+class="whatsapp-btn"
+target="_blank">
+
+💬
+
+</a>
+
+<!-- EMAILJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+
+emailjs.init("dGkCJeQmZ1w9tnwCu");
+
+document
+.getElementById("order-form")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_jqj9ab2",
+        "template_shtid7g",
+        this
+    )
+
+    .then(function(){
+
+        alert("Project submitted successfully!");
+
+        document.getElementById("order-form").reset();
+
+    })
+
+    .catch(function(error){
+
+        alert("Failed to submit project.");
+
+        console.log(error);
+
+    });
+
+});
+
+</script>
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+
+const service = urlParams.get("service");
+const packageType = urlParams.get("package");
+
+if(service){
+    document.getElementById("service").value = service;
+}
+
+if(packageType){
+    document.getElementById("package").value = packageType;
+}
+</script>
+</body>
+</html>

@@ -3,300 +3,163 @@
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>UI/UX Design | Elivon Technology</title>
 
-    <!-- FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header>
+<header class="navbar">
 
-        <img src="images/logo.png" alt="Elivon Logo" class="logo">
+    <img src="images/logo.png" alt="Logo" class="logo">
 
-        <nav>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
 
-            <a href="index.html">Home</a>
+    <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-            <a href="index.html#services">Services</a>
+</header>
 
-            <a href="index.html#portfolio">Portfolio</a>
+<!-- UI/UX PACKAGES -->
+<section class="section">
 
-            <a href="index.html#contact">Contact</a>
+    <h1 class="title">UI/UX Design Packages</h1>
 
-        </nav>
+    <p class="text">
+        Modern, intuitive, and visually stunning user interface and user experience
+        designs crafted for mobile apps, websites, and digital products.
+    </p>
 
-    </header>
+    <div class="pricing-grid">
 
-    <!-- HERO -->
-    <section class="section reveal">
+        <!-- BASIC -->
+        <div class="pricing-card">
 
-        <h1 class="title">
-            UI/UX Design Services
-        </h1>
+            <h3>Starter UI Design</h3>
 
-        <p class="text">
-            We design beautiful, intuitive, and user-focused interfaces
-            that improve user experience and elevate your brand.
-        </p>
+            <div class="price">K2,000</div>
 
-    </section>
+            <ul>
+                <li>✔ Up to 5 Screens</li>
+                <li>✔ Clean Modern Design</li>
+                <li>✔ Mobile UI Layout</li>
+                <li>✔ Figma File Included</li>
+            </ul>
 
-    <!-- PACKAGES -->
-    <section class="section reveal">
-
-        <div class="grid">
-
-            <!-- BASIC -->
-            <div class="card">
-
-                <h3>Basic UI Design</h3>
-
-                <p>
-                    Perfect for startups and small projects.
-                </p>
-
-                <br>
-
-                <h2>$80</h2>
-
-                <br>
-
-                <p>
-                    ✔ 1–3 Screens <br><br>
-
-                    ✔ Modern Layout <br><br>
-
-                    ✔ Mobile Design <br><br>
-
-                    ✔ Basic Prototype
-                </p>
-
-                <br>
-
-                <button onclick="window.location.href='https://wa.me/260000000000'">
-                    Order Now
-                </button>
-
-            </div>
-
-            <!-- PROFESSIONAL -->
-            <div class="card">
-
-                <h3>Professional UI/UX</h3>
-
-                <p>
-                    Complete professional application design.
-                </p>
-
-                <br>
-
-                <h2>$200</h2>
-
-                <br>
-
-                <p>
-                    ✔ Full Mobile App Design <br><br>
-
-                    ✔ User Experience Flow <br><br>
-
-                    ✔ Interactive Prototype <br><br>
-
-                    ✔ Design System <br><br>
-
-                    ✔ Responsive Layouts
-                </p>
-
-                <br>
-
-                <button onclick="window.location.href='https://wa.me/260000000000'">
-                    Order Now
-                </button>
-
-            </div>
-
-            <!-- PREMIUM -->
-            <div class="card">
-
-                <h3>Premium Product Design</h3>
-
-                <p>
-                    Advanced UI/UX for high-end digital products.
-                </p>
-
-                <br>
-
-                <h2>$500+</h2>
-
-                <br>
-
-                <p>
-                    ✔ Full Product Research <br><br>
-
-                    ✔ Wireframes <br><br>
-
-                    ✔ High Fidelity Design <br><br>
-
-                    ✔ Interactive Prototypes <br><br>
-
-                    ✔ Developer Handoff
-                </p>
-
-                <br>
-
-                <button onclick="window.location.href='https://wa.me/260762139892'">
-                    Get Quote
-                </button>
-
-            </div>
+          <button onclick="window.location.href='order.html?service=UI/UX Design'">
+    Get Started
+</button>
 
         </div>
 
-    </section>
+        <!-- STANDARD -->
+        <div class="pricing-card featured">
 
-    <!-- WHY CHOOSE US -->
-    <section class="section reveal">
+            <h3>Professional UI/UX</h3>
 
-        <h2 class="title">
-            Why Our UI/UX Stands Out
-        </h2>
+            <div class="price">K4,500</div>
 
-        <div class="grid">
+            <ul>
+                <li>✔ Complete UI System</li>
+                <li>✔ UX Flow Design</li>
+                <li>✔ Interactive Prototypes</li>
+                <li>✔ Responsive Layouts</li>
+                <li>✔ Premium Figma Components</li>
+            </ul>
 
-            <div class="card">
-
-                <h3>🎨 Modern Interfaces</h3>
-
-                <p>
-                    Clean, premium, and visually engaging designs.
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>🧠 User Focused</h3>
-
-                <p>
-                    We design experiences users enjoy and understand easily.
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>⚡ Conversion Driven</h3>
-
-                <p>
-                    Interfaces designed to increase engagement and results.
-                </p>
-
-            </div>
+           <button onclick="window.location.href='order.html?service=UI/UX Design&package=Standard'">
 
         </div>
 
-    </section>
+        <!-- PREMIUM -->
+        <div class="pricing-card">
 
-    <!-- CTA -->
-    <section class="section reveal">
+            <h3>Enterprise Product Design</h3>
 
-        <h2 class="title">
-            Need A Professional UI/UX Design?
-        </h2>
+            <div class="price">K8,500+</div>
 
-        <p class="text">
-            Let’s create a modern and engaging user experience for your project.
-        </p>
+            <ul>
+                <li>✔ Full Product Design</li>
+                <li>✔ Design System</li>
+                <li>✔ UX Research</li>
+                <li>✔ Advanced Prototyping</li>
+                <li>✔ Developer Handoff</li>
+            </ul>
 
-        <br><br>
-
-        <button onclick="window.location.href='https://wa.me/260000000000'">
-            Contact Us
-        </button>
-
-    </section>
-
-    <!-- JAVASCRIPT -->
-    <script src="script.js"></script>
-<!-- WHATSAPP FLOATING BUTTON -->
-<a href="https://wa.me/260762139892" class="whatsapp-float" target="_blank">
-
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-
-</a>
-<!-- FOOTER -->
-<footer class="footer">
-
-    <div class="footer-container">
-
-        <!-- BRAND -->
-        <div class="footer-box">
-
-            <h2>Elivon Technology</h2>
-
-            <p>
-                We build modern websites, mobile apps, UI/UX designs,
-                and digital solutions that help businesses grow.
-            </p>
-
-        </div>
-
-        <!-- QUICK LINKS -->
-        <div class="footer-box">
-
-            <h3>Quick Links</h3>
-
-            <a href="index.html">Home</a>
-            <a href="index.html#services">Services</a>
-            <a href="index.html#portfolio">Portfolio</a>
-            <a href="index.html#contact">Contact</a>
-
-        </div>
-
-        <!-- SERVICES -->
-        <div class="footer-box">
-
-            <h3>Services</h3>
-
-            <a href="web.html">Web Development</a>
-            <a href="mobile.html">Mobile Apps</a>
-            <a href="uiux.html">UI/UX Design</a>
-            <a href="logo.html">Branding</a>
-
-        </div>
-
-        <!-- CONTACT -->
-        <div class="footer-box">
-
-            <h3>Contact</h3>
-
-            <p>📧 elivontech@gmail.com</p>
-            <p>📱 WhatsApp Available</p>
-            <p>📍 Zambia</p>
+            <button onclick="window.location.href='order.html?service=UI/UX Design&package=Premium'">
 
         </div>
 
     </div>
 
-    <div class="footer-bottom">
+</section>
 
-        <p>© 2026 Elivon Technology. All Rights Reserved.</p>
+<!-- CONTACT SECTION -->
+<section id="contact" class="section">
+
+    <h2 class="title">Start Your UI/UX Project</h2>
+
+    <p class="text">
+        Ready to create beautiful and user-friendly digital experiences?
+        Let’s design something exceptional together.
+    </p>
+
+    <div class="hero-buttons">
+
+        <button onclick="window.location.href='index.html#contact'">
+            Contact Us
+        </button>
+
+        <button class="secondary-btn"
+        onclick="window.open('https://wa.me/260762139892')">
+            WhatsApp Us
+        </button>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <img src="images/logo.png" alt="Elivon Logo" class="footer-logo">
+
+        <p>
+            © 2026 Elivon Technology. All Rights Reserved.
+        </p>
 
     </div>
 
 </footer>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/260762139892"
+class="whatsapp-btn"
+target="_blank">
+
+    💬
+
+</a>
+<script>
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav");
+
+toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
+</script>
 </body>
 </html>

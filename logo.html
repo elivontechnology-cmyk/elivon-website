@@ -3,274 +3,161 @@
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Branding & Logo Design | Elivon Technology</title>
 
-    <!-- FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header>
+<header class="navbar">
 
-        <img src="images/logo.png" alt="Elivon Logo" class="logo">
+    <img src="images/logo.png" alt="Logo" class="logo">
 
-        <nav>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
 
-            <a href="index.html">Home</a>
+    <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-            <a href="index.html#services">Services</a>
+</header>
 
-            <a href="index.html#portfolio">Portfolio</a>
+<!-- BRANDING PACKAGES -->
+<section class="section">
 
-            <a href="index.html#contact">Contact</a>
+    <h1 class="title">Branding & Logo Design Packages</h1>
 
-        </nav>
+    <p class="text">
+        Professional branding and logo design solutions crafted to give your
+        business a powerful, memorable, and modern visual identity.
+    </p>
 
-    </header>
+    <div class="pricing-grid">
 
-    <!-- HERO -->
-    <section class="section reveal">
+        <!-- BASIC -->
+        <div class="pricing-card">
 
-        <h1 class="title">
-            Branding & Logo Design
-        </h1>
+            <h3>Starter Logo Package</h3>
 
-        <p class="text">
-            We create powerful brand identities, professional logos,
-            and visual systems that make your business stand out.
-        </p>
+            <div class="price">K800</div>
 
-    </section>
+            <ul>
+                <li>✔ 2 Logo Concepts</li>
+                <li>✔ PNG & JPG Files</li>
+                <li>✔ Modern Clean Design</li>
+                <li>✔ 2 Revisions</li>
+            </ul>
 
-    <!-- PACKAGES -->
-    <section class="section reveal">
+           <button onclick="window.location.href='order.html?service=Logo Design'">
+    Get Started
+</button>
+        </div>
 
-        <div class="grid">
+        <!-- STANDARD -->
+        <div class="pricing-card featured">
 
-            <!-- BASIC -->
-            <div class="card">
+            <h3>Professional Branding</h3>
 
-                <h3>Basic Logo</h3>
+            <div class="price">K2,000</div>
 
-                <p>Simple clean logo for startups.</p>
+            <ul>
+                <li>✔ Premium Logo Design</li>
+                <li>✔ Brand Color Palette</li>
+                <li>✔ Typography System</li>
+                <li>✔ Social Media Branding</li>
+                <li>✔ Unlimited Revisions</li>
+            </ul>
 
-                <br>
-
-                <h2>$50</h2>
-
-                <br>
-
-                <p>
-                    ✔ 1 Logo Concept <br><br>
-                    ✔ Basic Design <br><br>
-                    ✔ PNG Format <br><br>
-                    ✔ 1 Revision
-                </p>
-
-                <br>
-
-                <button onclick="window.location.href='https://wa.me/260000000000'">
-                    Order Now
-                </button>
-
-            </div>
-
-            <!-- BUSINESS -->
-            <div class="card">
-
-                <h3>Business Branding</h3>
-
-                <p>Professional brand identity package.</p>
-
-                <br>
-
-                <h2>$150</h2>
-
-                <br>
-
-                <p>
-                    ✔ 3 Logo Concepts <br><br>
-                    ✔ Brand Colors <br><br>
-                    ✔ Typography Guide <br><br>
-                    ✔ 3 Revisions <br><br>
-                    ✔ High Quality Files
-                </p>
-
-                <br>
-
-                <button onclick="window.location.href='https://wa.me/260000000000'">
-                    Order Now
-                </button>
-
-            </div>
-
-            <!-- PREMIUM -->
-            <div class="card">
-
-                <h3>Premium Brand Identity</h3>
-
-                <p>Full corporate branding system.</p>
-
-                <br>
-
-                <h2>$300+</h2>
-
-                <br>
-
-                <p>
-                    ✔ Full Brand Strategy <br><br>
-                    ✔ Logo Suite (Multiple Variations) <br><br>
-                    ✔ Brand Guidelines PDF <br><br>
-                    ✔ Social Media Kit <br><br>
-                    ✔ Unlimited Revisions (within scope)
-                </p>
-
-                <br>
-
-                <button onclick="window.location.href='https://wa.me/260000000000'">
-                    Get Quote
-                </button>
-
-            </div>
+            <button onclick="window.location.href='order.html?service=Logo Design&package=Standard'">
 
         </div>
 
-    </section>
+        <!-- PREMIUM -->
+        <div class="pricing-card">
 
-    <!-- WHY CHOOSE US -->
-    <section class="section reveal">
+            <h3>Complete Brand Identity</h3>
 
-        <h2 class="title">
-            Why Our Branding Stands Out
-        </h2>
+            <div class="price">K4,500+</div>
 
-        <div class="grid">
+            <ul>
+                <li>✔ Full Brand Identity</li>
+                <li>✔ Logo Variations</li>
+                <li>✔ Brand Guidelines</li>
+                <li>✔ Marketing Materials</li>
+                <li>✔ Business Card Design</li>
+            </ul>
 
-            <div class="card">
-
-                <h3>🎨 Creative Designs</h3>
-
-                <p>Unique logos that represent your brand identity.</p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>🧠 Strategic Branding</h3>
-
-                <p>We design with purpose and business growth in mind.</p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>📦 Complete Identity</h3>
-
-                <p>From logos to full brand systems and guidelines.</p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- CTA -->
-    <section class="section reveal">
-
-        <h2 class="title">
-            Ready To Build Your Brand?
-        </h2>
-
-        <p class="text">
-            Let’s create a strong visual identity for your business.
-        </p>
-
-        <br><br>
-
-        <button onclick="window.location.href='https://wa.me/260762139892'">
-            Contact Us
-        </button>
-
-    </section>
-<!-- WHATSAPP FLOATING BUTTON -->
-<a href="https://wa.me/260762139892" class="whatsapp-float" target="_blank">
-
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-
-</a>
-<!-- FOOTER -->
-<footer class="footer">
-
-    <div class="footer-container">
-
-        <!-- BRAND -->
-        <div class="footer-box">
-
-            <h2>Elivon Technology</h2>
-
-            <p>
-                We build modern websites, mobile apps, UI/UX designs,
-                and digital solutions that help businesses grow.
-            </p>
-
-        </div>
-
-        <!-- QUICK LINKS -->
-        <div class="footer-box">
-
-            <h3>Quick Links</h3>
-
-            <a href="index.html">Home</a>
-            <a href="index.html#services">Services</a>
-            <a href="index.html#portfolio">Portfolio</a>
-            <a href="index.html#contact">Contact</a>
-
-        </div>
-
-        <!-- SERVICES -->
-        <div class="footer-box">
-
-            <h3>Services</h3>
-
-            <a href="web.html">Web Development</a>
-            <a href="mobile.html">Mobile Apps</a>
-            <a href="uiux.html">UI/UX Design</a>
-            <a href="logo.html">Branding</a>
-
-        </div>
-
-        <!-- CONTACT -->
-        <div class="footer-box">
-
-            <h3>Contact</h3>
-
-            <p>📧 elivontech@gmail.com</p>
-            <p>📱 WhatsApp Available</p>
-            <p>📍 Zambia</p>
+            <button onclick="window.location.href='order.html?service=Logo Design&package=Premium'">
 
         </div>
 
     </div>
 
-    <div class="footer-bottom">
+</section>
 
-        <p>© 2026 Elivon Technology. All Rights Reserved.</p>
+<!-- CONTACT SECTION -->
+<section id="contact" class="section">
+
+    <h2 class="title">Build Your Brand Identity</h2>
+
+    <p class="text">
+        Let’s create a professional and memorable brand identity for your business.
+    </p>
+
+    <div class="hero-buttons">
+
+        <button onclick="window.location.href='index.html#contact'">
+            Contact Us
+        </button>
+
+        <button class="secondary-btn"
+        onclick="window.open('https://wa.me/260762139892')">
+            WhatsApp Us
+        </button>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <img src="images/logo.png" alt="Elivon Logo" class="footer-logo">
+
+        <p>
+            © 2026 Elivon Technology. All Rights Reserved.
+        </p>
 
     </div>
 
 </footer>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/260762139892"
+class="whatsapp-btn"
+target="_blank">
+
+    💬
+
+</a>
+<script>
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav");
+
+toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
+</script>
 </body>
 </html>

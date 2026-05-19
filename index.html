@@ -44,22 +44,21 @@
 </div>
 
     <!-- HEADER -->
-    <header>
+    <header class="navbar">
 
-        <img src="images/logo.png" alt="Elivon Logo" class="logo">
+    <img src="images/logo.png" alt="Logo" class="logo">
 
-        <div class="menu-toggle" id="menu-toggle">☰</div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
 
-        <nav id="nav">
-            <a href="#">Home</a>
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-        </nav>
+    <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-    </header>
-
+</header>
     <!-- HERO -->
    <section class="hero">
 
@@ -377,6 +376,12 @@
     <p class="text">
         Have a project idea? Let’s bring it to life. Send us a message and we’ll respond as soon as possible.
     </p>
+    <button
+onclick="window.location.href='appointment.html'">
+
+    Book Appointment
+
+</button>
 
     <div class="contact-wrapper">
 
@@ -532,6 +537,14 @@ window.addEventListener("load", function () {
 
     }, 1200); // loading duration
 
+});
+</script>
+<script>
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav");
+
+toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
 });
 </script>
 </body>
