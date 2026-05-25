@@ -547,5 +547,75 @@ toggle.addEventListener("click", () => {
     nav.classList.toggle("active");
 });
 </script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- SUPABASE FINAL CONNECTION + FORM LOGIC -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+const supabaseUrl = "https://jyzuviakszltxerxuyea.supabase.co";
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp5enV2aWFrc3psdHhlcnh1eWVhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkxODEyMTgsImV4cCI6MjA5NDc1NzIxOH0.Vj5tiASTMyrjAwfZQCUWy8_n3AIlDslC4L1rNd5GJ3k"
+
+const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+console.log("Supabase connected");
+
+/* =========================
+   SUBMIT ORDER FUNCTION
+========================= */
+async function submitOrder() {
+
+    const order = {
+        name: document.getElementById("name")?.value,
+        email: document.getElementById("email")?.value,
+        phone: document.getElementById("phone")?.value,
+        service: document.getElementById("service")?.value,
+        package: document.getElementById("package")?.value,
+        company: document.getElementById("company")?.value,
+        message: document.getElementById("message")?.value
+    };
+
+    const { error } = await supabase
+        .from("orders")
+        .insert([order]);
+
+    if (error) {
+        alert("Order failed: " + error.message);
+        console.log(error);
+        return;
+    }
+
+    alert("Order submitted successfully!");
+}
+
+/* =========================
+   SUBMIT APPOINTMENT FUNCTION
+========================= */
+async function submitAppointment() {
+
+    const appointment = {
+        name: document.getElementById("name")?.value,
+        email: document.getElementById("email")?.value,
+        phone: document.getElementById("phone")?.value,
+        company: document.getElementById("company")?.value,
+        meeting_date: document.getElementById("date")?.value,
+        meeting_time: document.getElementById("time")?.value,
+        meeting_type: document.getElementById("type")?.value,
+        details: document.getElementById("details")?.value
+    };
+
+    const { error } = await supabase
+        .from("appointments")
+        .insert([appointment]);
+
+    if (error) {
+        alert("Appointment failed: " + error.message);
+        console.log(error);
+        return;
+    }
+
+    alert("Appointment booked successfully!");
+}
+</script>
 </body>
 </html>
