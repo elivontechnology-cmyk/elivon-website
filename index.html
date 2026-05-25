@@ -547,38 +547,36 @@ toggle.addEventListener("click", () => {
     nav.classList.toggle("active");
 });
 </script>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
-<!-- SUPABASE FINAL CONNECTION + FORM LOGIC -->
+<!-- SUPABASE (LOAD ONLY ONCE) -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script>
+/* =========================
+   SUPABASE INIT
+========================= */
+
 const supabaseUrl = "https://jyzuviakszltxerxuyea.supabase.co";
-const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp5enV2aWFrc3psdHhlcnh1eWVhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkxODEyMTgsImV4cCI6MjA5NDc1NzIxOH0.Vj5tiASTMyrjAwfZQCUWy8_n3AIlDslC4L1rNd5GJ3k"
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp5enV2aWFrc3psdHhlcnh1eWVhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkxODEyMTgsImV4cCI6MjA5NDc1NzIxOH0.Vj5tiASTMyrjAwfZQCUWy8_n3AIlDslC4L1rNd5GJ3k";
 
 const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 
 console.log("Supabase connected");
 
 /* =========================
-   SUBMIT ORDER FUNCTION
+   ORDER SUBMIT
 ========================= */
 async function submitOrder() {
 
-    const order = {
-        Name: document.getElementById("name")?.value,
-        company: document.getElementById("company")?.value,
-        position: document.getElementById("position")?.value,
-        phone: document.getElementById("phone")?.value,
-        location: document.getElementById("location")?.value,
-        service: document.getElementById("service")?.value,
-        package: document.getElementById("package")?.value,
-        message: document.getElementById("message")?.value
-    };
-
-    const { error } = await supabase
-        .from("orders")
-        .insert([order]);
+    const { error } = await supabase.from("orders").insert([{
+        Name: document.getElementById("name").value,
+        company: document.getElementById("company").value,
+        position: document.getElementById("position").value,
+        phone: document.getElementById("phone").value,
+        location: document.getElementById("location").value,
+        service: document.getElementById("service").value,
+        package: document.getElementById("package").value,
+        message: document.getElementById("message").value
+    }]);
 
     if (error) {
         alert("Order failed: " + error.message);
@@ -590,27 +588,23 @@ async function submitOrder() {
 }
 
 /* =========================
-   SUBMIT APPOINTMENT FUNCTION
+   APPOINTMENT SUBMIT
 ========================= */
 async function submitAppointment() {
 
-    const appointment = {
-        name: document.getElementById("name")?.value,
-        company: document.getElementById("company")?.value,
-        position: document.getElementById("position")?.value,
-        email: document.getElementById("email")?.value,
-        phone: document.getElementById("phone")?.value,
-        location: document.getElementById("location")?.value,
-        meeting_type: document.getElementById("meeting_type")?.value,
-        meeting_place: document.getElementById("meeting_place")?.value,
-        date: document.getElementById("date")?.value,
-        time: document.getElementById("time")?.value,
-        details: document.getElementById("details")?.value
-    };
-
-    const { error } = await supabase
-        .from("appointments")
-        .insert([appointment]);
+    const { error } = await supabase.from("appointments").insert([{
+        name: document.getElementById("a_name").value,
+        company: document.getElementById("a_company").value,
+        position: document.getElementById("a_position").value,
+        email: document.getElementById("a_email").value,
+        phone: document.getElementById("a_phone").value,
+        location: document.getElementById("a_location").value,
+        meeting_type: document.getElementById("meeting_type").value,
+        meeting_place: document.getElementById("meeting_place").value,
+        date: document.getElementById("date").value,
+        time: document.getElementById("time").value,
+        details: document.getElementById("details").value
+    }]);
 
     if (error) {
         alert("Appointment failed: " + error.message);
